@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fecr · Gizlilik ve Destek</title>
+<!-- Metin FajrUp/PrivacyView.swift ve README "Gizlilik ve veri" ile aynı gerçekleri söyler; biri değişirse diğerleri de güncellenmeli. -->
+<style>
+  :root { --bg: #fbf8f3; --fg: #1d1b2e; --muted: #5d5a6e; --accent: #b8742a; --line: #e6e0d6; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #14122a; --fg: #f1ece3; --muted: #b3aec4; --accent: #e8a95a; --line: #2c2946; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 8px; color: var(--accent); }
+  p, li { color: var(--fg); }
+  .muted { color: var(--muted); }
+  dl { margin: 0; }
+  dt { font-weight: 600; margin-top: 14px; }
+  dd { margin: 2px 0 0; color: var(--muted); }
+  a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Fecr · Gizlilik Politikası</h1>
+  <p class="muted">Son güncelleme: 2 Ekim 2026</p>
+
+  <p>Fecr ücretsizdir. Reklam, abonelik, uygulama içi satın alma ve veri satışı yoktur; uygulamada reklam ya da analitik SDK'sı bulunmaz. Kullanıcı hesabı olmadığı için hiçbir sunucuda size ait bir profil yoktur.</p>
+  <p>Veri sorumlusu: Gökhan Türkmen (bireysel geliştirici). İletişim: <a href="mailto:gokhanturkmeen@gmail.com">gokhanturkmeen@gmail.com</a></p>
+
+  <h2>Toplanmayanlar</h2>
+  <ul>
+    <li>Reklam ya da üçüncü taraf izleme SDK'sı yok, reklam kimliği kullanılmaz.</li>
+    <li>Hesap veya giriş gerekmez.</li>
+    <li>Analitik, çökme raporu SDK'sı ya da kullanım istatistiği yok.</li>
+    <li>Konum geçmişi, cami ziyaretleri ve ibadet kayıtları sunucuya gitmez.</li>
+  </ul>
+
+  <h2>Konum</h2>
+  <p>Vakitler ve kıble cihazda hesaplanır. Koordinatlar uygulama açıkken yalnızca bellekte tutulur; diske, widget verisine veya bir sunucuya yazılmaz. Konum izinlerini iOS ve watchOS yönetir. Otomatik konumu kapatıp şehri elle seçerseniz GPS hiç kullanılmaz; yalnızca seçtiğiniz şehrin adı ve merkezi bu telefonda saklanır.</p>
+
+  <h2>Cihazda kalanlar</h2>
+  <p>Namaz takibi, kaza kayıtları, zekât girdileri, Kur'an'daki yer imleri, favoriler, notlar, okuma listeleri ve ezber işaretleri yalnızca bu cihazda saklanır. Kamera ve mikrofon kullanan özellikler (AR kıble, Ayet tarayıcı, Helal tarayıcı, Kâri Tanı, canlı hutbe çevirisi, Karaoke Kıraat) görüntüyü ve sesi telefonda işler; saklamaz ve göndermez. Uyanış doğrulamasındaki adım sayısı telefonda okunur, saklanmaz. Hatırlatmalar cihazın yerel bildirimlerini kullanır. Sabah notu ve Wake DNA açıklaması Apple'ın cihaz üstü modeliyle telefonda çözümlenir; Adaptive Wake alarm sesini telefondaki ölçümlerle seçer. Apple Watch'ta Fecr açıksa bu haftanın vakitleri, kılınan namazlar ve muaf günler doğrudan kendi saatinize aktarılır; bir sunucudan geçmez.</p>
+
+  <h2>Yüz verisi (gözle kaydırma)</h2>
+  <p>Kur'an okuyucusunda gözle kaydırmayı açarsanız ön kameradaki TrueDepth sensörü ARKit ile yüzünüzü izler. Fecr bundan yalnızca başınızın ve gözlerinizin baktığı yönün açılarını hesaplar ve sayfayı kaydırmak için kullanır. Yüz görüntüsü, yüz haritası ya da bakış verisi kaydedilmez, telefondan çıkmaz, reklam veya başka bir amaçla kullanılmaz ve hiçbir üçüncü tarafla paylaşılmaz. Kalibrasyon yalnızca okuma sırasında bellekte tutulur; okuyucudan çıkınca ya da özelliği kapatınca takip durur.</p>
+
+  <h2>İnternet kullanan özellikler</h2>
+  <p class="muted">Hepsi hesap gerektirmeden çalışır; isteklere kimlik ya da cihaz bilgisi eklenmez.</p>
+  <dl>
+    <dt>Resmî Diyanet vakitleri</dt>
+    <dd>Diyanet'e yalnızca ilçe kimliği gider; 30 günlük çizelge cihazda saklanır.</dd>
+    <dt>İlçe bulma, şehir arama, yakındaki camiler, uydu kıble haritası</dt>
+    <dd>Konum ya da yazdığınız arama metni Apple Haritalar'a gider ve saklanmaz. Yol tarifine dokununca hedef caminin koordinatı, "Google Haritalar'da tümünü gör"e dokununca bulunduğunuz konum Google Haritalar'da açılır; ikisi de yalnızca siz dokununca gider.</dd>
+    <dt>Hava durumu</dt>
+    <dd>Konum yaklaşık 11 km'ye yuvarlanarak Open-Meteo'ya gönderilir; konum yoksa seçili Diyanet ilçesinin adı Open-Meteo'nun yer arama servisine gider. Sonuç yalnızca bellekte tutulur.</dd>
+    <dt>Kur'an sesleri, kesintisiz kıraat, meal, tefsir, resimler ve içerik dosyaları</dt>
+    <dd>Islamic Network (cdn.islamic.network), QuranEnc (quranenc.com) ve GitHub'daki fecr-icerik deposundan (resimler, Bilgi kartları, E-kodu listesi, Kâri Tanı kataloğu, hadis arşivi güncellemesi) indirilir ya da akış olarak çalınır. İsteklere kişisel veri eklenmez.</dd>
+    <dt>Asistan</dt>
+    <dd>Yazdığınız soru Fecr'in asistan sunucusuna gönderilir ve saklanmaz. Sunucu cevap üretmez; yalnızca kaynaklı ayet ve hadis metinleri döndürür.</dd>
+    <dt>İsmimle Uyandır (isteğe bağlı, Google Gemini)</dt>
+    <dd>Yalnızca kendi Gemini API anahtarınızı girip açıkça izin verirseniz, adınızı içeren iki cümle seslendirilmek üzere Google LLC'nin Gemini API'sine gönderilir. İzin vermezseniz istek atılmaz ve ses telefonda üretilir. Anahtar yalnızca telefonunuzun Anahtar Zinciri'nde durur.</dd>
+  </dl>
+
+  <h2>Üçüncü taraflar</h2>
+  <p>Veri yalnızca yukarıda adı geçen hizmetlere, yalnızca belirtilen amaç için gider: Apple (Haritalar), Google (Haritalar ve isteğe bağlı Gemini), Open-Meteo, Islamic Network, QuranEnc, GitHub ve Diyanet İşleri Başkanlığı. Fecr'in kendi asistan sunucusu gelen soruyu saklamaz ve loglamaz. Her hizmet veriyi kendi kullanım şartları ve gizlilik politikası kapsamında işler. Fecr bu hizmetlere, bu politikada anlatılandan fazla veri göndermez ve onlardan veriyi bu politikadaki korumaya eşdeğer biçimde işlemelerini bekler.</p>
+
+  <h2>Saklama, izinleri geri alma ve silme</h2>
+  <ul>
+    <li>Fecr'in tuttuğu her şey telefonunuzdadır ve siz silene kadar orada kalır. Uygulamayı silmek bu kayıtları kaldırır. iOS, Anahtar Zinciri'ndeki Gemini anahtarını ve Partner Lock eşleşmesini uygulama silindikten sonra da tutabilir; bunları silmeden önce uygulamadaki alanları boşaltabilir ya da eşleşmeyi kaldırabilirsiniz.</li>
+    <li>Gemini iznini geri almak için ses seçicideki İsmimle Uyandır bölümünde Gemini anahtarını silin; anahtar değişince izin de sıfırlanır.</li>
+    <li>Fecr'in sunucularında size ait kayıt olmadığı için ayrıca silinecek bir hesap yoktur. Bir soru ya da silme talebi için bize e-posta yazın.</li>
+  </ul>
+
+  <hr>
+
+  <h1 id="destek">Destek</h1>
+  <p>Soru, hata bildirimi, içerik düzeltmesi ya da veri silme talebi için: <a href="mailto:gokhanturkmeen@gmail.com">gokhanturkmeen@gmail.com</a></p>
+  <p class="muted">Namaz vakitleri Diyanet'in resmî çizelgesinden ya da cihazda hesaplanır. Dinî bir hüküm için ehil bir âlime danışın.</p>
+</main>
+</body>
+</html>
